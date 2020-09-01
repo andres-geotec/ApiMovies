@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiMovies</name>
+    </assembly>
+    <members>
+        <member name="M:ApiMovies.Controllers.CategorysController.GetCategorys">
+            <summary>
+            Obtener todas las categorías.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.CategorysController.GetCategory(System.Int32)">
+            <summary>
+            Obtener una categoría por Id.
+            </summary>
+            <param name="id">El Id de la categoría.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.CategorysController.CreateCategory(ApiMovies.Models.Dtos.CategoryDto)">
+            <summary>
+            Crea una nueva categoría.
+            </summary>
+            <param name="categoryDto">La categoría que se va a crear.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.CategorysController.UpdateCategory(System.Int32,ApiMovies.Models.Dtos.CategoryDto)">
+            <summary>
+            Actualizar una categoría existente.
+            </summary>
+            <param name="id">El Id de la categoría.</param>
+            <param name="categoryDto">La categoría con datos modificados.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.CategorysController.DeleteCategory(System.Int32)">
+            <summary>
+            Borrar una categoría existente.
+            </summary>
+            <param name="id">El Id de la categoría.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.GetMovies">
+            <summary>
+            Obtener todas las palículas.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.GetMovie(System.Int32)">
+            <summary>
+            Obtener una película por Id.
+            </summary>
+            <param name="id">El Id de la palícula.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.GetMoviesByCategory(System.Int32)">
+            <summary>
+            Obtener película por Id de la categoría.
+            </summary>
+            <param name="categoryId">El Id de la categoría.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.SearchMovie(System.String)">
+            <summary>
+            Buscar película por nombre.
+            </summary>
+            <param name="name">El Nombre de la película.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.CreateMovie(ApiMovies.Models.MovieCreateDto)">
+            <summary>
+            Crea una nueva película.
+            </summary>
+            <param name="movieCreateDto">La película que se va a crear.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.UpdateMovie(System.Int32,ApiMovies.Models.MovieUpdateDto)">
+            <summary>
+            Actualizar una película existente.
+            </summary>
+            <param name="id">El Id de la película.</param>
+            <param name="movieUpdateDto">La película con datos modificados.</param>
+        </member>
+        <member name="M:ApiMovies.Controllers.MoviesController.DeleteMovie(System.Int32)">
+            <summary>
+            Borrar una película existente.
+            </summary>
+            <param name="id">El Id de la película.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.UsersController.GetUsers">
+            <summary>
+            Obtener lista de usuarios.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Obtener usuario por id
+            </summary>
+            <param name="id">El id del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.UsersController.Registry(ApiMovies.Models.Dtos.UserAuthDto)">
+            <summary>
+            Registro de nuevo Usuario
+            </summary>
+            <param name="userAuthDto">El usuario que se va a registrar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiMovies.Controllers.UsersController.Login(ApiMovies.Models.Dtos.UserAuthLoginDto)">
+            <summary>
+            Acceso/Autenticación de usuario
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

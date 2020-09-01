@@ -1,0 +1,115 @@
+@host = https://localhost:5001/
+
+### GetCategorys
+GET {{host}}api/categorys
+
+### GetCategory
+GET {{host}}api/categorys/4
+
+### CreateCategory
+POST {{host}}api/categorys
+content-type: application/json
+
+{
+    "name": "Comedia",
+    "timestamp": "2020-08-30T20:13:45"
+}
+
+### UpdateCategory
+PATCH {{host}}api/categorys/5
+content-type: application/json
+
+{
+    "id": 5,
+    "name": "Comedia Romantica",
+    "timestamp": "2020-08-30T20:13:45"
+}
+
+### DeleteCategory
+DELETE {{host}}api/categorys/2
+
+
+### GetMovies
+GET {{host}}api/movies
+
+### GetMovie
+GET {{host}}api/movies/5
+
+### GetMoviesByCategory
+GET {{host}}api/movies/bycategory/4
+
+### SearchMovies
+GET {{host}}api/movies/search?name=hasta
+
+### CreateMovies
+POST {{host}}api/movies
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Spiderman
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="duration"
+
+100
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="description"
+
+La pelicula de el hombre araña
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="classification"
+
+1
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="categoryId"
+
+4
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+< ./1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### UpdateMovie
+PATCH {{host}}api/movies/2
+content-type: application/json
+
+{
+    "id": 2,
+    "name": "Terminator",
+    "description": "Robots del futuro",
+    "duration": "110",
+    "classification": 2,
+    "categoryId": 5
+}
+
+### DeleteMovie
+DELETE {{host}}api/movies/5
+
+
+### GetUsers
+GET {{host}}api/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJhbmRyZXMiLCJuYmYiOjE1OTg5MTY4MzgsImV4cCI6MTU5OTAwMzIzOCwiaWF0IjoxNTk4OTE2ODM4fQ.5-THvBfa62wIrpsdsVF5fk6FxIYDeZ8NHqmkEni4MB8wB4i3YvmvbbKVMlPOR0dg7y6zeTrn6Gwgk7gcWh1NHQ
+
+### GetUser
+GET {{host}}api/users/2
+
+### Registry
+POST {{host}}api/users/registry
+content-type: application/json
+
+{
+    "user": "alfonso",
+    "password": "123456"
+}
+
+### Login
+POST {{host}}api/users/login
+content-type: application/json
+
+{
+    "user": "andres",
+    "password": "123456"
+}
